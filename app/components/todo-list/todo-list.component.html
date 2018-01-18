@@ -3,8 +3,16 @@
         <li class="collection-header">
             <h5>TODOs</h5>
         </li>
+        <li class="collection-item">
+            <form ng-submit="addTask()">
+                <div class="input-field">
+                    <input id="first_name" type="text" class="validate" ng-model="newTask">
+                    <label for="first_name">New Task</label>
+                </div>
+            </form>
+        </li>
         <li class="collection-item" ng-repeat="item in items">
-            <app-todo-item></app-todo-item>
+            <app-todo-item item="item"></app-todo-item>
         </li>
     </ul>
 </section>

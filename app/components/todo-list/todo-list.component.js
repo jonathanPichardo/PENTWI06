@@ -1,3 +1,5 @@
+import { TodoItem } from '../../model/todoItem';
+
 const template = require('./todo-list.component.html');
 export class TodoListComponent {
     constructor() {
@@ -10,7 +12,19 @@ export class TodoListComponent {
 class TodoListController {
 
     constructor($scope) {
-        $scope.items = [1, 2, 3, 4];
+        
+        $scope.items = [];
+
+        $scope.addTask = () => {
+            if(!$scope.newTask){
+                return;
+            }
+            $scope.items.push(new TodoItem($scope.newTask));
+            $scope.newTask = '';
+        };
+
+        $scope.newTask = '';
+
     }
 
 }
