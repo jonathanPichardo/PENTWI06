@@ -1,11 +1,16 @@
 import angular from 'angular';
 
+import { AppComponent } from './app.component';
+
 import {
     TodoListComponent,
     TodoItemComponent
 } from './components';
 
-export const app = angular.module('todo-app', []);
+const app = angular.module('todo-app', []);
 
-app.component('appTodoList', TodoListComponent);
-app.component('appTodoItem', TodoItemComponent);
+app.directive('appRoot', AppComponent);
+app.directive('appTodoList', TodoListComponent);
+app.directive('appTodoItem', TodoItemComponent);
+
+export default app;

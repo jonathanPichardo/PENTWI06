@@ -1,6 +1,8 @@
+const template = require('./todo-item.component.html')
+
 export class TodoItemComponent {
     constructor() {
-        this.templateUrl = './todo-item.component.html';
+        this.template = template;
         this.controller = TodoItemController;
     }
 }
