@@ -1,1 +1,5 @@
-<article>{{item.description}}</article>
+<li class="collection-item" ng-click="item.done = !item.done" ng-class="item.done ? 'red lighten-5' : 'light-blue lighten-5'">
+    <article>
+        <span>{{item.description}}</span>
+    </article>
+</li>

@@ -11,8 +11,6 @@
                 </div>
             </form>
         </li>
-        <li class="collection-item" ng-repeat="item in items">
-            <app-todo-item item="item"></app-todo-item>
-        </li>
+        <app-todo-item ng-repeat="item in items" item="item"></app-todo-item>
     </ul>
 </section>

@@ -12,6 +12,9 @@ export class TodoItemComponent {
 
 class TodoItemController {
     contructor($scope) {
-        
+        $scope.setDone = () => {
+            console.log('Set Done');
+            $scope.item.done = true;
+        }
     }
 }
